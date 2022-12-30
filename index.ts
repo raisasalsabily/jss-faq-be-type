@@ -7,6 +7,8 @@ import cors from "cors"
 import cookieParser from "cookie-parser"
 import morgan from "morgan"
 
+import routes from "./routes"
+
 // alt
 const dbConnect = require("./config/database")
 
@@ -27,6 +29,7 @@ app.get("/", (req, res) => {
 app.get("/", (req, res) => {
   res.json({ msg: "MongoDB tersambung" })
 })
+app.use("/api", routes.categoryRouter)
 
 // server listening
 const PORT = process.env.PORT || 5000
