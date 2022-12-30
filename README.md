@@ -1,0 +1,2 @@
+# jss-faq-be-type
+ 
